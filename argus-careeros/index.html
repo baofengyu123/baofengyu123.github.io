@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Argus CareerOS — evidence-first multilingual career operating system" />
+  <meta name="color-scheme" content="dark" />
+  <title>Argus CareerOS</title>
+  <style>
+    /* Public mirror follows the same semantic design system as the product. / 公共镜像沿用与产品一致的语义化设计系统。 */
+    :root{--bg:#07101f;--surface:#101b2d;--surface2:#16243a;--text:#eff5ff;--soft:#a8b5ca;--line:#2b3b55;--primary:#8da8ff;--mint:#49cf9f;--radius:22px;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC","Noto Sans JP",sans-serif;color-scheme:dark}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 82% 8%,rgba(49,87,213,.28),transparent 28%),radial-gradient(circle at 10% 35%,rgba(45,212,191,.1),transparent 20%),var(--bg);color:var(--text)}a{color:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;font-weight:900}.mark{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#6f8cff,#2dd4bf);box-shadow:0 12px 35px rgba(49,87,213,.35)}.actions{display:flex;align-items:center;gap:8px}.button,.select{min-height:42px;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--text);font:inherit}.button{display:inline-flex;align-items:center;justify-content:center;padding:9px 15px;text-decoration:none;font-weight:800}.button.primary{background:var(--primary);color:#07101f;border-color:transparent}.select{padding:0 11px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:90px 0 76px}.kicker{color:var(--mint);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(45px,7vw,80px);line-height:.98;letter-spacing:-.055em;margin:18px 0}.hero p,.section p{color:var(--soft);line-height:1.75}.hero p{font-size:18px;max-width:720px}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.truth{padding:25px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(141,168,255,.11),rgba(73,207,159,.07));box-shadow:0 28px 75px rgba(0,0,0,.3)}.truth h2{margin:9px 0 20px}.truth-grid{display:grid;gap:9px}.truth-row{display:flex;justify-content:space-between;gap:12px;padding:11px 12px;border:1px solid rgba(255,255,255,.06);border-radius:12px;background:rgba(255,255,255,.035)}.truth-row strong{font-size:12px}.truth-row span{color:var(--mint);font-size:12px}.section{padding:70px 0}.section-head{max-width:780px}.section h2{font-size:clamp(31px,4vw,49px);letter-spacing:-.04em;margin:10px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.card{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}.number{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:rgba(141,168,255,.13);color:var(--primary);font-weight:900}.card h3{margin:18px 0 7px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:28px}.node{position:relative;padding:20px 14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);text-align:center}.node:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:39%;color:var(--soft)}.node strong{display:block}.node small{display:block;color:var(--soft);margin-top:7px;line-height:1.5}.quality{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;margin-top:28px}.score{min-height:260px;display:grid;place-content:center;text-align:center;border-radius:var(--radius);background:linear-gradient(145deg,#3157d5,#13584c)}.score strong{font-size:72px}.score span{color:#e1eaff}.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.role{padding:14px;border:1px solid var(--line);border-radius:13px;background:var(--surface);font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:36px 0 50px;border-top:1px solid var(--line);color:var(--soft)}
+    @media(max-width:850px){.hero,.quality{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.node::after{display:none}.roles{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.nav{padding:16px 0}.actions .button{display:none}.hero{padding:55px 0}.hero h1{font-size:47px}.flow,.roles{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <!-- Authored bilingual copy keeps the public site independent of runtime AI. / 人工双语文案使公共官网不依赖运行时 AI。 -->
+  <header class="wrap nav">
+    <div class="brand"><span class="mark">A</span><span>Argus CareerOS</span></div>
+    <div class="actions">
+      <select id="language" class="select" aria-label="Language / 语言"><option value="zh">中文</option><option value="en">English</option></select>
+      <a class="button" href="https://github.com/baofengyu123/Argus-CareerOS">GitHub</a>
+      <a class="button primary" href="https://github.com/baofengyu123/Argus-CareerOS/releases/tag/v0.1.0" data-key="download">下载</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="kicker" data-key="kicker">可信 AI · 可验证事实 · 人工控制</div>
+        <h1 data-key="headline">让每一次求职决策都有证据。</h1>
+        <p data-key="intro">Argus CareerOS 将岗位发现、企业验证、人岗评估、材料生成、真实投递、面试与 Offer 决策整合为一个连续工作流，并从产品底层区分事实、推断、估算与模拟数据。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/baofengyu123/Argus-CareerOS/releases/tag/v0.1.0" data-key="download">下载</a>
+          <a class="button" href="#architecture" data-key="architectureLink">查看架构</a>
+        </div>
+      </div>
+      <aside class="truth">
+        <div class="kicker">Truth Model</div>
+        <h2 data-key="truthTitle">六类事实状态</h2>
+        <div class="truth-grid">
+          <div class="truth-row"><strong>OBSERVED</strong><span data-key="observed">直接观察</span></div>
+          <div class="truth-row"><strong>USER_CONFIRMED</strong><span data-key="confirmed">用户确认</span></div>
+          <div class="truth-row"><strong>INFERRED</strong><span data-key="inferred">证据推断</span></div>
+          <div class="truth-row"><strong>ESTIMATED</strong><span data-key="estimated">明确估算</span></div>
+          <div class="truth-row"><strong>SIMULATED</strong><span data-key="simulated">隔离演示</span></div>
+          <div class="truth-row"><strong>UNVERIFIED</strong><span data-key="unverified">尚未验证</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-head"><div class="kicker">One continuous workflow</div><h2 data-key="workflowTitle">从机会到 Offer，不再维护两个割裂系统。</h2><p data-key="workflowIntro">产品围绕求职者任务组织，而不是围绕内部 Agent 或技术模块组织。</p></div>
+      <div class="grid">
+        <article class="card"><span class="number">01</span><h3 data-key="discoverTitle">发现与验证</h3><p data-key="discoverText">导入来源并保留采集时间、字段级证据和冲突信息。</p></article>
+        <article class="card"><span class="number">02</span><h3 data-key="prepareTitle">评估与材料</h3><p data-key="prepareText">确定性规则先执行；无支持事实的 AI 陈述无法获批。</p></article>
+        <article class="card"><span class="number">03</span><h3 data-key="applyTitle">投递与成长</h3><p data-key="applyText">真实回执驱动状态，拒绝假发送、假面试和假 Offer。</p></article>
+      </div>
+    </section>
+
+    <section id="architecture" class="wrap section">
+      <div class="section-head"><div class="kicker">Architecture</div><h2 data-key="architectureTitle">模块化单体 + Worker 的务实路线。</h2><p data-key="architectureText">先统一契约、事实与体验，达到明确规模和团队边界后再服务化。</p></div>
+      <div class="flow">
+        <div class="node"><strong>Web / Desktop</strong><small>中文 · English · 日本語</small></div>
+        <div class="node"><strong>API</strong><small>Versioned contracts</small></div>
+        <div class="node"><strong>Domain</strong><small>Rules · FSM · Audit</small></div>
+        <div class="node"><strong>Worker</strong><small>AI · OCR · Export</small></div>
+        <div class="node"><strong>Evidence</strong><small>Source · Time · Type</small></div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-head"><div class="kicker">Quality gate</div><h2 data-key="qualityTitle">99+ 是证据门禁，不是营销分数。</h2><p data-key="qualityText">任一角色缺少测试、研究或生产证据，正式 GA 自动阻断。</p></div>
+      <div class="quality"><div class="score"><strong>&gt;99</strong><span data-key="eachRole">每个角色独立通过</span></div><div class="roles"><div class="role">AI Architecture</div><div class="role">AI Product</div><div class="role">HR</div><div class="role">B2B Product Lead</div><div class="role">Owner</div><div class="role">Job Seeker</div><div class="role">UX</div><div class="role">UI</div><div class="role">New User</div></div></div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><span>© 2026 Argus CareerOS</span><span data-key="footer">证据优先 · 人工控制 · 多语言</span></footer>
+
+  <script>
+    /* Language switching uses reviewed copy and persists user preference. / 语言切换使用经审核文案并持久化用户偏好。 */
+    const copy={zh:{download:"下载 v0.1.0",architectureLink:"查看架构",kicker:"可信 AI · 可验证事实 · 人工控制",headline:"让每一次求职决策都有证据。",intro:"Argus CareerOS 将岗位发现、企业验证、人岗评估、材料生成、真实投递、面试与 Offer 决策整合为一个连续工作流，并从产品底层区分事实、推断、估算与模拟数据。",truthTitle:"六类事实状态",observed:"直接观察",confirmed:"用户确认",inferred:"证据推断",estimated:"明确估算",simulated:"隔离演示",unverified:"尚未验证",workflowTitle:"从机会到 Offer，不再维护两个割裂系统。",workflowIntro:"产品围绕求职者任务组织，而不是围绕内部 Agent 或技术模块组织。",discoverTitle:"发现与验证",discoverText:"导入来源并保留采集时间、字段级证据和冲突信息。",prepareTitle:"评估与材料",prepareText:"确定性规则先执行；无支持事实的 AI 陈述无法获批。",applyTitle:"投递与成长",applyText:"真实回执驱动状态，拒绝假发送、假面试和假 Offer。",architectureTitle:"模块化单体 + Worker 的务实路线。",architectureText:"先统一契约、事实与体验，达到明确规模和团队边界后再服务化。",qualityTitle:"99+ 是证据门禁，不是营销分数。",qualityText:"任一角色缺少测试、研究或生产证据，正式 GA 自动阻断。",eachRole:"每个角色独立通过",footer:"证据优先 · 人工控制 · 多语言"},en:{download:"Download v0.1.0",architectureLink:"View architecture",kicker:"Trustworthy AI · Verifiable facts · Human control",headline:"Evidence for every career decision.",intro:"Argus CareerOS unifies discovery, company verification, fit evaluation, asset generation, truthful applications, interviews, and offer decisions while distinguishing facts, inference, estimates, and simulations at the product core.",truthTitle:"Six provenance states",observed:"Directly observed",confirmed:"User confirmed",inferred:"Evidence-based inference",estimated:"Explicit estimate",simulated:"Isolated demo",unverified:"Not verified",workflowTitle:"One product from opportunity to offer.",workflowIntro:"The product is organized around user tasks, not internal agents or technical modules.",discoverTitle:"Discover and verify",discoverText:"Import sources while retaining capture time, field evidence, and conflicts.",prepareTitle:"Evaluate and prepare",prepareText:"Deterministic rules run first; unsupported AI claims cannot be approved.",applyTitle:"Apply and grow",applyText:"Provider receipts drive state—never fake sends, interviews, or offers.",architectureTitle:"A pragmatic modular-monolith plus worker path.",architectureText:"Unify contracts, truth, and experience before splitting services at clear scale and ownership thresholds.",qualityTitle:"99+ is an evidence gate, not a marketing score.",qualityText:"GA is blocked when any role lacks test, research, or production evidence.",eachRole:"Independent pass for every role",footer:"Evidence-first · Human-controlled · Multilingual"}};
+    const select=document.querySelector('#language');const apply=()=>{const lang=select.value;document.documentElement.lang=lang==='zh'?'zh-CN':'en-US';document.querySelectorAll('[data-key]').forEach(node=>node.textContent=copy[lang][node.dataset.key]);localStorage.setItem('argus-public-language',lang)};select.value=localStorage.getItem('argus-public-language')||'zh';select.addEventListener('change',apply);apply();
+  </script>
+</body>
+</html>
